@@ -2075,4 +2075,115 @@ ul {
         grid-template-columns: repeat(3, 1fr) !important;
     }
 }
+/* ===== MOBILE PHOTO FIX - HIGH SPECIFICITY ===== */
+@media only screen and (max-width: 768px) {
+    /* Force photo to appear first - using display order */
+    .hero-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .hero-image {
+        order: 1 !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .hero-text {
+        order: 2 !important;
+    }
+    
+    .profile-photo {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    
+    /* 2 columns for projects and certifications */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+    
+    .certs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+    }
+    
+    /* Smaller text sizes */
+    body {
+        font-size: 14px !important;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem !important;
+        text-align: center !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.4rem !important;
+        text-align: center !important;
+    }
+    
+    .hero-text p {
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem !important;
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 480px) {
+    .projects-grid,
+    .certs-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .profile-photo {
+        width: 220px !important;
+        height: 220px !important;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* Ensure desktop stays the same */
+@media only screen and (min-width: 769px) {
+    .hero-container {
+        flex-direction: row !important;
+    }
+    
+    .hero-image {
+        order: 0 !important;
+    }
+    
+    .hero-text {
+        order: 0 !important;
+        text-align: left !important;
+    }
+    
+    .hero-text h1,
+    .hero-text h2,
+    .hero-text p {
+        text-align: left !important;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .certs-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
 
