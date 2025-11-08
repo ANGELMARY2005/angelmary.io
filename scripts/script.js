@@ -244,6 +244,7 @@ function openCertPage(certType) {
     }
 }
 // Contact Form Submission
+/*
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
@@ -290,6 +291,7 @@ if (contactForm) {
         }
     });
 }
+*/
 
 // Notification function
 function showNotification(message, type) {
@@ -396,4 +398,5 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     // Add any initialization code here
 });
+
 
