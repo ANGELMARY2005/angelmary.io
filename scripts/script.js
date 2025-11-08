@@ -85,6 +85,7 @@ document.addEventListener('keydown', (e) => {
 
 // Open works modal with details
 // Simplified Open works modal with details
+// Updated Open works modal with details (removed download option)
 function openCertPage(certType) {
     const worksData = {
         'conference': {
@@ -187,7 +188,7 @@ function openCertPage(certType) {
     if (work) {
         const modalBody = document.getElementById('modal-body');
 
-        // Build certificate section HTML if certificate exists
+        // Build certificate section HTML if certificate exists (removed download button)
         const certificateSection = work.certificate ? `
             <div class="certificate-section">
                 <h3>Certificate</h3>
@@ -201,10 +202,6 @@ function openCertPage(certType) {
                         <a href="${work.certificate}" target="_blank" class="certificate-link">
                             <i class="fas fa-external-link-alt"></i>
                             Open in New Tab
-                        </a>
-                        <a href="${work.certificate}" download class="certificate-link secondary">
-                            <i class="fas fa-download"></i>
-                            Download PDF
                         </a>
                     </div>
                 </div>
@@ -401,3 +398,4 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     // Add any initialization code here
 });
+
